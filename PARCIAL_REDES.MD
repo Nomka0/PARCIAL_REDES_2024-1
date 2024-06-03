@@ -293,7 +293,7 @@ R2(config-router)#default-information originate
 	![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603050058.png)
 
  **NAT**
- * configuración nat
+ * configuración nat 
 ```javascript
 ip nat inside source static <ip privada> (192.168.X.98) <ip pública> (200.123.226.1)
 ```
@@ -333,9 +333,9 @@ R2(config-if)#ip nat inside
 * y en g0/3/0, 'ip nat outside'
 
 ```javascript
-interface GigabitEthernet0/3/0
-ip nat outside
-!
+R2(config-if)#int g0/3/0
+
+R2(config-if)#ip nat outside
 ```
 
 **PAT**
