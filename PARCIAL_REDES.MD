@@ -132,6 +132,11 @@ S3(config-if)#ip address 192.168.X.222 255.255.255.224
 
 **NOTA:** Se calculó la última ip de lan para S1 y S3 usando esta calculadora: https://www.subnet-calculator.com/ , simplemente coloca la ip de la lan de la red con su máscara correspondiente (r1 para s1 y r3 para s3) y te dará el rango de ips disponibles
 
+*  Server local **(Reemplazar 250 por x)**
+
+	![[Pasted image 20240603102603.png]]
+
+
 **7. HTTP y DNS en server local.**
 
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603041108.png)
@@ -268,6 +273,10 @@ R2(dhcp-config)#dns-server 192.168.X.98
 R2(dhcp-config)#ip dhcp pool VLAN101
 R2(dhcp-config)#dns-server 192.168.X.98
 ```
+
+* Una vez configurado, comprobar en cada pc si se puede asignar DHCP
+
+	![[Pasted image 20240603102451.png]]
 
 **9. Configurar una ruta predeterminada**
 ```javascript
