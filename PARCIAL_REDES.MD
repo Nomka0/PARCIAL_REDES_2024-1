@@ -222,4 +222,4 @@ R2(dhcp-config)#default-router 192.168.x.161
 
 # TABLA TALLER ORIGINAL
 *  Esta tabla es para comparar si son las mismas ips, si es así, se pueden usar los comandos de arriba sin muchos cambios
-![](Pasted image 20240603013819.png)
+![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/master/Pasted%20image%2020240603013819.png)
