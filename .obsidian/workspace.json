@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GUIA_FINAL.md",
+                "file": "PARCIAL_REDES.MD",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GUIA_FINAL.md",
+                "file": "PARCIAL_REDES.MD",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GUIA_FINAL.md"
+                "file": "PARCIAL_REDES.MD"
               }
             }
           }
@@ -159,10 +160,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1bde91ec25f18139",
+  "active": "4dd6944a8f230eed",
   "lastOpenFiles": [
-    "PARCIAL_REDES.MD",
     "GUIA_FINAL.md",
+    "PARCIAL_REDES.MD",
     "Comandos CiscoPDF.pdf",
     "Untitled.md",
     "Pasted image 20240603142637.png",
