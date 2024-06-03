@@ -134,7 +134,7 @@ S3(config-if)#ip address 192.168.X.222 255.255.255.224
 
 *  Server local **(Reemplazar 250 por x)**
 
-	![[Pasted image 20240603102603.png]]
+	![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603102603.png)
 
 
 **7. HTTP y DNS en server local.**
@@ -276,7 +276,7 @@ R2(dhcp-config)#dns-server 192.168.X.98
 
 * Una vez configurado, comprobar en cada pc si se puede asignar DHCP
 
-	![[Pasted image 20240603102451.png]]
+	![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603102451.png)
 
 **9. Configurar una ruta predeterminada**
 ```javascript
