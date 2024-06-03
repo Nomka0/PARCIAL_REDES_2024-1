@@ -117,7 +117,7 @@ S1(config)#int vlan1
 
 S1(config-if)#ip add
 
-S1(config-if)#ip address 192.168.250.30 255.255.255.224
+S1(config-if)#ip address 192.168.X.30 255.255.255.224
 S1(config-if)#no sh
 ```
 * S3
@@ -126,7 +126,7 @@ S3(config)#int vlan1
 
 S3(config-if)#no sh
 
-S3(config-if)#ip address 192.168.250.222 255.255.255.224
+S3(config-if)#ip address 192.168.X.222 255.255.255.224
 ```
 
 **NOTA:** Se calculó la última ip de lan para S1 y S3 usando esta calculadora: https://www.subnet-calculator.com/ , simplemente coloca la ip de la lan de la red con su máscara correspondiente (r1 para s1 y r3 para s3) y te dará el rango de ips disponibles
@@ -262,9 +262,9 @@ R2(dhcp-config)#network 192.168.x.96 255.255.255.224
 R2(dhcp-config)#default-router 192.168.x.97
 
 R2(config)#ip dhcp pool VLAN100
-R2(dhcp-config)#dns-server 192.168.250.98
+R2(dhcp-config)#dns-server 192.168.X.98
 R2(dhcp-config)#ip dhcp pool VLAN101
-R2(dhcp-config)#dns-server 192.168.250.98
+R2(dhcp-config)#dns-server 192.168.X.98
 ```
 
 **9. Configurar una ruta predeterminada**
@@ -283,7 +283,7 @@ R2(config-router)#default-information originate
  **NAT**
  * configuración nat
 ```javascript
-ip nat inside source static <ip privada> (192.168.250.98) <ip pública> (200.123.226.1)
+ip nat inside source static <ip privada> (192.168.X.98) <ip pública> (200.123.226.1)
 ```
 
 * colocamos en cada g0/0.x el comando 'ip nat inside'
@@ -330,15 +330,15 @@ ip nat outside
 * Aquí permitiremos todas las redes lan (r1,r2 y r3. en r2 también las g0/0.x).
 ```javascript
 
-R2(config)#access-list 1 permit 192.168.250.0 0.0.0.31
+R2(config)#access-list 1 permit 192.168.X.0 0.0.0.31
 
-R2(config)#access-list 1 permit 192.168.250.32 0.0.0.31
+R2(config)#access-list 1 permit 192.168.X.32 0.0.0.31
 
-R2(config)#access-list 1 permit 192.168.250.192 0.0.0.31
+R2(config)#access-list 1 permit 192.168.X.192 0.0.0.31
 
-R2(config)#access-list 1 permit 192.168.250.229 0.0.0.31
+R2(config)#access-list 1 permit 192.168.X.229 0.0.0.31
 
-R2(config)#access-list 1 permit 192.168.250.232 0.0.0.31
+R2(config)#access-list 1 permit 192.168.X.232 0.0.0.31
 
 ```
 
