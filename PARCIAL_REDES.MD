@@ -28,7 +28,7 @@ R2(config)#line vty 0 4
 R2(config)#access-class 10 in
 ```
 * Esta es la vlan de gestión en el taller actual, comparar con la del examen, y cambiar si es necesario en el anterior comando (3.5)
-![[Pasted image 20240603014445.png]]
+![[https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/master/Pasted%20image%2020240603014445.png]]
 
 **6. Configure enrutamiento entre vlans**
 
