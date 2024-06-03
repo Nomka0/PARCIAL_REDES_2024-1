@@ -125,6 +125,7 @@ R2(config-if)#ip address 200.31.12.1 255.255.255.252
 R2(config-if)#no sh 
 ```
 
+* En R3
 ```javascript
 Router(config)#hostname R3
 R3(config)#int g0/0
