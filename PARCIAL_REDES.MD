@@ -30,6 +30,7 @@ R2(config)#line vty 0 4
 R2(config)#access-class 10 in
 ```
 * Esta es la vlan de gestión en el taller actual, comparar con la del examen, y cambiar si es necesario en el anterior comando (3.5)
+
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603014445.png)
 
 **4. 1. Configuración de opciones de seguridad puertos switch S2** 
@@ -132,6 +133,7 @@ S3(config-if)#ip address 192.168.X.222 255.255.255.224
 **NOTA:** Se calculó la última ip de lan para S1 y S3 usando esta calculadora: https://www.subnet-calculator.com/ , simplemente coloca la ip de la lan de la red con su máscara correspondiente (r1 para s1 y r3 para s3) y te dará el rango de ips disponibles
 
 **7. HTTP y DNS en server local.**
+
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603041108.png)
 
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603041131.png)
@@ -278,6 +280,7 @@ R2(config-router)#default-information originate
 **10. Configure la NAT/PAT** 
 
 * completar tabla de server local así:
+
 	![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603050058.png)
 
  **NAT**
@@ -349,4 +352,5 @@ R2(config)#ip nat inside source list 1 interface g0/3/0 overload
 
 # TABLA TALLER ORIGINAL
 *  Esta tabla es para comparar si son las mismas ips, si es así, se pueden usar los comandos de arriba sin muchos cambios
+
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603013819.png)
