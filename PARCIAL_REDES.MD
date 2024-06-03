@@ -1,4 +1,5 @@
-
+# Guía de Laboratorio No 11
+# Configuración de DHCP en Router y NAT/PAT
 <p> Esta es una guía para el ejercicio final/parcial de fundamentos de redes. no sé si todo sea exactamente igual en el parcial a esta guía basada en el ejercicio final, pero aquí dejo el aporte... Mucha suerte, compañero!</p>
 
 **2. Configuración de parámetros básico R2:**
