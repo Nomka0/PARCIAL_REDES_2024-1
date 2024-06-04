@@ -290,11 +290,11 @@ R3(config-router)#passive-interface g0/0
 
 * Una vez configurado, comprobar en cada pc si se puede asignar DHCP
 
-	![[Pasted image 20240603102451.png]]
+	![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603102451.png)
 
 **Configuración de enrutamiento de Server local**
 
-![[Pasted image 20240603132938.png]]
+![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603132938.png)
 
 # Punto 6
 <p> Ya se hizo antes cuando se configuró el router 2 (router on a stick, e inter vlan), y lo demás (switches, etc) </p>
@@ -305,14 +305,14 @@ R3(config-router)#passive-interface g0/0
 
 * Se cambia el index para que muestre ABCVentas
 
-	![[Pasted image 20240603135722.png]]
+	![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603135722.png)
 
 ## 7.2 
 
 * Se agrega www.google.com con la ip de google que se muestra abajito del server encima del dibujo de la nube en la topología.
 * Se agrega www.ABCVentas.com con la ip privada del server .
 
-	![[Pasted image 20240603142637.png]]
+	![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603142637.png)
 **Importante**: No olvidar darle **"ON"** al servicio de DNS
 
 **9. Configurar una ruta predeterminada**
@@ -328,7 +328,7 @@ R2(config-router)#default-information originate
 
 * completar tabla de server local así: (teniendo en cuenta el valor de X)
 
-![[Pasted image 20240603140913.png]]
+![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603140913.png)
 
  **NAT** 
 ```javascript
