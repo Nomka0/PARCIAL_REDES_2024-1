@@ -359,7 +359,63 @@ R2(config)#access-list 1 permit 192.168.X.232 0.0.0.31
 R2(config)#ip nat inside source list 1 interface g0/3/0 overload
 ```
 
+**12. Modifique la configuración del direccionamiento dinámico para que ahora el DHCP solamente lo haga el Router R2 para todas las redes, recuerde el comando ip helper-address**
+
+* Vamos a deshacer las configuraciones de dhcp en R1 y R3 y a colocar el **ip helper-address**
+```javascript
+R1(config)#ip dhcp pool LAN-R1
+
+R1(dhcp-config)#no network 192.168.X.0 255.255.255.224
+
+R1(dhcp-config)#no default-router 192.168.X.1
+
+no dns-server 192.168.X.98
+
+R1(dhcp-config)#exit
+
+R1(config)#no ip dhcp pool LAN-R1
+
+R1(config)#int g0/0
+R1(config-if)#ip helper-address 192.168.X.226 //Esta ip corresponde a la ip de g0/0/0 en R2 (Donde esta conectado R1 a R2)
+```
+
+```javascript
+R3(config)#ip dhcp pool LAN-R1
+
+R3(dhcp-config)#no network 192.168.X.192 255.255.255.224
+
+R3(dhcp-config)#no default-router 192.168.X.193
+
+no dns-server 192.168.X.98
+
+R3(dhcp-config)#exit
+
+R3(config)#no ip dhcp pool LAN-R1
+R3(config)#int g0/0
+R3(config-if)#ip helper-address 192.168.X.234 //Esta ip corresponde a la ip de g0/1/0 en R2 (Donde esta conectado R3 a R2)
+```
+
+* DHCP en R2
+```javascript
+R2(config)#ip dhcp excluded-address 192.168.X.33 192.168.X.37
+R2(config)#ip dhcp excluded-address 192.168.X.65 192.168.X.69
+R2(config)#ip dhcp excluded-address 192.168.X.1 192.168.X.5
+R2(config)#ip dhcp excluded-address 192.168.X.193 192.168.X.197
+R2(config)#ip dhcp excluded-address 192.168.X.222
+
+R2(config)#ip dhcp pool LAN-R1
+R2(dhcp-config)#network 192.168.X.0 255.255.255.224
+R2(dhcp-config)#default-router 192.168.X.1
+R2(dhcp-config)#dns-server 192.168.X.98
+
+R2(config)#ip dhcp pool LAN-R3
+R2(dhcp-config)#network 192.168.X.192 255.255.255.224
+R2(dhcp-config)#default-router 192.168.X.193
+R2(dhcp-config)# dns-server 192.168.X.98
+
+```
 # TABLA TALLER ORIGINAL
 *  Esta tabla es para comparar si son las mismas ips, si es así, se pueden usar los comandos de arriba sin muchos cambios
 
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603013819.png)
+
