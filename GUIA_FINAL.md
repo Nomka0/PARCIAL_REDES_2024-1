@@ -1,6 +1,6 @@
 # EXAMEN FINAL  FUNDAMENTOS DE REDES  2024-1
 
-<img src="https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240604174024.png" width="300" height="350"/> <img src="https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240604174131.png" width="300"  height="350"/>
+<img src="https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240604174024.png" width="540" height="550"/> <img src="https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240604174131.png" width="400"  height="550"/>
 
 
 <p> Esta es una guía para el parcial de fundamentos de redes.  Esta hecho sobre el parcial montado actualmente (Junio-03-2024) en el campus, puede ser que no todo sea exactamente igual en la versión final del parcial, pero en dicho caso, puede servir de guía. Mucha suerte, compañero!</p>
