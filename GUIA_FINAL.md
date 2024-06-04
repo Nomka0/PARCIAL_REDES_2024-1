@@ -1,6 +1,6 @@
 # EXAMEN FINAL  FUNDAMENTOS DE REDES  2024-1
 
-<p> Esta es una guía para el parcial de fundamentos de redes.  Esta hecho sobre el parcial montado actualmente (Junio-03-2024) en el campus, puede ser que no todo sea exactamente igual en la guía final, pero en dicho caso, puede servir de guía. Mucha suerte, compañero!</p>
+<p> Esta es una guía para el parcial de fundamentos de redes.  Esta hecho sobre el parcial montado actualmente (Junio-03-2024) en el campus, puede ser que no todo sea exactamente igual en la versión final del parcial, pero en dicho caso, puede servir de guía. Mucha suerte, compañero!</p>
 
 **2. Configuración de parámetros básico R2:**
 ``` javascript
