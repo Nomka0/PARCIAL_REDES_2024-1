@@ -419,3 +419,5 @@ R2(dhcp-config)# dns-server 192.168.X.98
 
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603013819.png)
 
+
+
