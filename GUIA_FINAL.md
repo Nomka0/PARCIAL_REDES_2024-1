@@ -1,6 +1,5 @@
 # EXAMEN FINAL  FUNDAMENTOS DE REDES  2024-1
 
-Topología             |  Tabla de direccionamiento
 :-------------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240604174024.png)  |  ![](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240604174131.png)
 
