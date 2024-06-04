@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARCIAL_REDES.MD",
+                "file": "GUIA_FINAL.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PARCIAL_REDES.MD",
+                "file": "GUIA_FINAL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PARCIAL_REDES.MD",
+                "file": "GUIA_FINAL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PARCIAL_REDES.MD"
+                "file": "GUIA_FINAL.md"
               }
             }
           }
@@ -161,8 +161,12 @@
   },
   "active": "4dd6944a8f230eed",
   "lastOpenFiles": [
-    "GUIA_FINAL.md",
+    "Examen final 2023-2(2).pdf",
+    "lu25514b5qua.tmp",
+    "Pasted image 20240604174131.png",
+    "Pasted image 20240604174024.png",
     "PARCIAL_REDES.MD",
+    "GUIA_FINAL.md",
     "Comandos CiscoPDF.pdf",
     "Untitled.md",
     "Pasted image 20240603142637.png",
@@ -175,8 +179,6 @@
     "GUIA_FINAL.md~",
     "GUIA_FINAL.MD~",
     "GUIA_FINAL.MD",
-    "Pasted image 20240603102603.png",
-    "Pasted image 20240603102451.png",
-    "Pasted image 20240603102306.png"
+    "Pasted image 20240603102603.png"
   ]
 }
