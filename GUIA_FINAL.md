@@ -23,7 +23,11 @@ R2(config)#ip domain-name cisco.com
 R2(config)#username Admin password P4ssw0rd123 //usuario y password para ssh
 R2(config)#crypto key generate rsa
 
-R2(config)#access-list 10 permit 192.168.X.130 0.0.0.31 //IP correspondiente a la interfaz vlan de gestión en S2 con su respectiva wildcard. Esto es para que ÚNICAMENTE se pueda hacer conexión SSH desde S2
+//IP correspondiente a la interfaz vlan de gestión en S2
+//con su respectiva wildcard. Esto es para que ÚNICAMENTE 
+//se pueda hacer conexión SSH desde S2
+
+R2(config)#access-list 10 permit 192.168.X.130 0.0.0.31 
 R2(config)#access-list 10 deny any
 R2(config)#line vty 0 4
 R2(config-line)#transport input ssh
