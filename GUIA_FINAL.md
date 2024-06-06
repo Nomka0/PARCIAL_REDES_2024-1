@@ -26,6 +26,8 @@ R2(config)#crypto key generate rsa
 R2(config)#access-list 10 permit 192.168.X.130 0.0.0.31 //IP correspondiente a la interfaz vlan de gestión en S2 con su respectiva wildcard
 R2(config)#access-list 10 deny any
 R2(config)#line vty 0 4
+R2(config-line)#transport input ssh
+R2(config-line)#login local
 R2(config-line)#access-class 10 in
 R2(config-line)#exit
 ```
