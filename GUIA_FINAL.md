@@ -194,6 +194,11 @@ S3(config)#ip default-gateway 192.168.X.221 //IP de la interfaz -1.
 S3(config)#ip name-server 192.168.X.98 // IP privada de server local
 ```
 
+## Comprobación de conexión de ssh en S2
+```javascript
+ssh -l Admin 192.168.X.129 <ip de vlan de gestiónen la subinterfaz de r2 >(en ese caso, si te fijas  en las tablas, es la vlan 13, entonces es la ip correspondiente a la interfaz g0/0.13) 
+```
+
 ## 5.1
 
 * En Router 2
