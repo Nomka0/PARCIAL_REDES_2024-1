@@ -76,11 +76,19 @@ S2(config-if)#sh
 S2(config-if)#int vlan 1
 S2(config-if)#sh
 S2(config-if)#int r f0/1-24
-S2(config-if-range)#switchport mode access //4.2
-S2(config-if-range)#switchport port-security //4.3 Habilite la seguridad de puertos en los puertos de los switch
-S2(config-if-range)#switchport port-security mac-address sticky //4.4 Agregar todas las direcciones MAC seguras que se detectan dinámicamente en un puerto (hasta el máximo establecido) a la configuración en ejecución del switch
-S2(config-if-range)#switchport port-security maximum 2 //4.5 Configure máximo 2 MAC permitidas por puerto
-S2(config-if-range)#switchport port-security violation restrict //4.6
+S2(config-if-range)#switchport mode access 
+
+//4.3 Habilite la seguridad de puertos en los puertos de los switch
+S2(config-if-range)#switchport port-security 
+
+//4.4 Agregar todas las direcciones MAC seguras que se detectan dinámicamente en un puerto (hasta el máximo establecido) a la configuración en ejecución del switch
+S2(config-if-range)#switchport port-security mac-address sticky 
+
+//4.5 Configure máximo 2 MAC permitidas por puerto
+S2(config-if-range)#switchport port-security maximum 2 
+
+//4.6
+S2(config-if-range)#switchport port-security violation restrict 
 ```
 
 **5. Configure el direccionamiento para todos los dispositivos de acuerdo con la tabla de direccionamiento.**
@@ -88,7 +96,8 @@ S2(config-if-range)#switchport port-security violation restrict //4.6
 * En R1
 ```javascript
 //Tener en cuenta ip y mascara de subred respectivamente según la tabla de direcciones en el word del laboratorio
-//No olvides poner NO SH para cada interfaz. Recuerda que así tengas la configuración correcta si no enciendes cada interfaz con este comando, entonces no va a funcionar
+//No olvides poner NO SH para cada interfaz. Recuerda que así tengas la configuración correcta si no 
+// enciendes cada interfaz con este comando, entonces no va a funcionar
 //Las Descr son opcionales. Pero supongo q es mejor ponerlas
 Router(config)#hostname R1
 R1(config)#int g0/0
@@ -108,12 +117,15 @@ R1(config-if)#ip address 192.168.X.229 255.255.255.252
 * En R2
 ```javascript
 //Primero entramos a g0/0 y la encendemos con SH
-//Esto es para habilitar la interfaz, y para que cada vez que entremos a una subinterfaz (EJ: g0/0.10) esta se encienda automaticamente (es más, creo que si no se enciende g0/0, entonces las subinterfaces no se encenderán, incluso aunque les pongas no sh individualmente!)
+//Esto es para habilitar la interfaz, y para que cada vez que entremos a una subinterfaz (EJ: g0/0.10)
+//esta se encienda automaticamente (es más, creo que si no se enciende g0/0, entonces las subinterfaces no se encenderán, incluso aunque les pongas no sh individualmente!)
 R2(config)#int g0/0
 R2(config-if)#NO SH
 
 R2(config-if)#int g0/0.10
-//IMPORTANTE!!!!! Antes de poner la ip par cada subinterfaz, tienes que poner esta configuración de encapsulación donde lo único que cambia es el último valor, el cuál es el número de la subinterfaz (EJ: para g0/0.10 el valor es 10, y para g0/0.11 es 11)
+//IMPORTANTE!!!!! Antes de poner la ip par cada subinterfaz, tienes que poner esta configuración de encapsulación
+//donde lo único que cambia es el último valor, el cuál es el número de la subinterfaz 
+//(EJ: para g0/0.10 el valor es 10, y para g0/0.11 es 11)
 //Se colocan las ips y máscaras de acuerdo a la tabla de direcciones del word del parcial
 R2(config-subif)#encapsulation dot1Q 10 
 R2(config-subif)#ip address 192.168.X.33 255.255.255.240
