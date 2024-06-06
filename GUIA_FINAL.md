@@ -114,7 +114,7 @@ R1(config-if)#no sh
 R1(config-if)#ip address 192.168.X.229 255.255.255.252
 ```
 
-* En ****```R2```*** 
+* En ***```R2```*** 
 ```javascript
 //Primero entramos a g0/0 y la encendemos con SH
 //Esto es para habilitar la interfaz, y para que cada vez que entremos a una subinterfaz (EJ: g0/0.10)
@@ -251,7 +251,7 @@ R2(dhcp-config)#DNs-server 192.168.X.98//ip privada de server local
 R2(dhcp-config)#exit
 ```
 * Mismos conceptos para ```LAN-R1``` y ```Lan-R3```...
-### DHCP para ```LAN-R1``` (EN ****```ROUTER 2```***)
+### DHCP para ```LAN-R1``` (EN ***```ROUTER 2```***)
 ```javascript
 R2(config)#ip dhcp pool LAN-R1
 R2(dhcp-config)#network 192.168.X.0 255.255.255.224//la ip de la interfaz g0/0 en R1 restandole 1 al último número (1-1 = 0) 
