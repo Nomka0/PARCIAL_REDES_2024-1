@@ -118,7 +118,8 @@ R1(config-if)#ip address 192.168.X.229 255.255.255.252
 ```javascript
 //Primero entramos a g0/0 y la encendemos con SH
 //Esto es para habilitar la interfaz, y para que cada vez que entremos a una subinterfaz (EJ: g0/0.10)
-//esta se encienda automaticamente (es más, creo que si no se enciende g0/0, entonces las subinterfaces no se encenderán, incluso aunque les pongas no sh individualmente!)
+//esta se encienda automaticamente (es más, creo que si no se enciende g0/0, entonces las subinterfaces 
+//no se encenderán, incluso aunque les pongas no sh individualmente!)
 R2(config)#int g0/0
 R2(config-if)#NO SH
 
@@ -139,7 +140,8 @@ R2(config-subif)#int g0/0.13
 R2(config-subif)#encapsulation dot1Q 13
 R2(config-subif)#ip address 192.168.X.129 255.255.255.240
 R2(config-subif)#int g0/0.14
-//Fijate que estamos en la subinterfaz correspondiente a la vlan 14, la cual es la vlan Nativa. Por lo tanto tenemos que poner al final de la configuración de encapsulación la palabra "native"
+//Fijate que estamos en la subinterfaz correspondiente a la vlan 14, la cual es la vlan Nativa. Por lo tanto
+//tenemos que poner al final de la configuración de encapsulación la palabra "native"
 R2(config-subif)#encapsulation dot1Q 14 native //IMPORTANTE: No olvidar colocar native aquí
 R2(config-subif)#ip address 192.168.X.161 255.255.255.240
 R2(config-subif)#int g0/0/0
@@ -158,7 +160,8 @@ R2(config-if)#no sh
 
 * En R3
 ```javascript
-// Lo mismo... NO SH para encender, descripción opcional y la ip y máscara de red de acuerdo a la tabla de direccionamiento del word del parcial
+// Lo mismo... NO SH para encender, descripción opcional y la ip y máscara de red de acuerdo a la tabla 
+//de direccionamiento del word del parcial
 Router(config)#hostname R3
 R3(config)#int g0/0
 R3(config-if)#Descr LAN R3
@@ -181,7 +184,8 @@ R3(config-if)#no sh
 
 * Switch 1
 ```javascript
-// Lo mismo... NO SH para encender, descripción opcional y la ip y máscara de red de acuerdo a la tabla de direccionamiento del word del parcial
+// Lo mismo... NO SH para encender, descripción opcional y la ip y máscara de red de acuerdo a la tabla de
+//direccionamiento del word del parcial
 S1>en
 S1#conf t
 S1(config)#int vlan 1
@@ -192,7 +196,7 @@ S1(config-if)#EXIT
 
 
 S1(config)#ip default-gateway 192.168.X.29 //IP de la interfaz de vlan 1 -1.
-S1(config)#ip name-server 192.168.X.98 // IP privada de server local. la cual es el dns para todos. l
+S1(config)#ip name-server 192.168.X.98 // IP privada de server local. la cual es el dns para todos.
 ```
 
 * En Switch 2
@@ -266,23 +270,36 @@ R2(dhcp-config)# dns-server 192.168.X.98
 ### Excluyendo IPs
 * Se excluyen las 5 primeras IPs de cada LAN en los diferentes routers, también los de las vlans 10 y 11 (g0/0.10 y g0/0.11) y la 192.168.X.222 igualmente, ya que al meter la ip LAN más alta (la del Router 3) y su respectiva máscara en la calculadora https://www.subnet-calculator.com/, obtenemos que la última IP es esa.
 ```javascript
-R2(config)#ip dhcp excluded-address 192.168.X.1 192.168.X.5 //las primeras 5 ips en R1 (desde la ip de g0/0)
-R2(config)#ip dhcp excluded-address 192.168.X.33 192.168.X.37//las primeras 5 ips en vlan 10 de R2 (desde la ip de g0/0.10)
-R2(config)#ip dhcp excluded-address 192.168.X.65 192.168.X.69//las primeras 5 ips en vlan 11 de R2 (desde la ip de g0/0.11)
-R2(config)#ip dhcp excluded-address 192.168.X.193 192.168.X.197//las primeras 5 ips en R3(desde la ip de g0/0)
-R2(config)#ip dhcp excluded-address 192.168.X.222 //última ip de la red según la calculadora
+//las primeras 5 ips en R1 (desde la ip de g0/0)
+R2(config)#ip dhcp excluded-address 192.168.X.1 192.168.X.5 
+
+//las primeras 5 ips en vlan 10 de R2 (desde la ip de g0/0.10)
+R2(config)#ip dhcp excluded-address 192.168.X.33 192.168.X.37
+
+//las primeras 5 ips en vlan 11 de R2 (desde la ip de g0/0.11)
+R2(config)#ip dhcp excluded-address 192.168.X.65 192.168.X.69
+
+//las primeras 5 ips en R3(desde la ip de g0/0)
+R2(config)#ip dhcp excluded-address 192.168.X.193 192.168.X.197
+
+//última ip de la red según la calculadora
+R2(config)#ip dhcp excluded-address 192.168.X.222 
 ```
 
 ## En Router 1 
 ```javascript
 R1(config)#int g0/0
-R1(config-if)#ip helper-address 192.168.X.226 //Esta ip corresponde a la ip de g0/0/0 en R2 (Donde esta conectado R1 a R2)
+
+//Esta ip corresponde a la ip de g0/0/0 en R2 (Donde esta conectado R1 a R2)
+R1(config-if)#ip helper-address 192.168.X.226 
 ```
 
 ## En Router 3 
 ```javascript
 R3(config)#int g0/0
-R3(config-if)#ip helper-address 192.168.X.234 //Esta ip corresponde a la ip de g0/1/0 en R2 (Donde esta conectado R3 a R2)
+
+//Esta ip corresponde a la ip de g0/1/0 en R2 (Donde esta conectado R3 a R2)
+R3(config-if)#ip helper-address 192.168.X.234 
 ```
 
 # PUNTO 8 OSPF
@@ -298,7 +315,9 @@ Teniendo esto en cuenta, la wildcard se obtiene restando cada octeto de la másc
 R2(config)#router ospf 10
 R2(config-router)#router-id 2.2.2.2
 // Las IPs correspondientes a las subinterfaces de g0/0, pero -1, con sus respectivas wildcards
-R2(config-router)#network 192.168.X.32 0.0.0.15 area 0 //Si te fijas, esta fue la wildcard que sacamos antes
+
+//Si te fijas, esta fue la wildcard que sacamos antes "0.0.0.15"
+R2(config-router)#network 192.168.X.32 0.0.0.15 area 0 
 R2(config-router)#network 192.168.X.64 0.0.0.15 area 0
 R2(config-router)#network 192.168.X.96 0.0.0.15 area 0
 R2(config-router)#network 192.168.X.128 0.0.0.15 area 0
@@ -370,10 +389,14 @@ R3(config-router)#passive-interface g0/0
 **9. Configurar una ruta predeterminada**
 
 ```javascript
-R2(config)#ip route 0.0.0.0 0.0.0.0 g0/3/0 //Esos 0s son básicamente porque queremos decir que lo mande para cualquier dirección IP con cualquier máscara por la interfaz a la que va conectado al ISP.
+
+//Esos 0s son básicamente porque queremos decir que lo mande para cualquier dirección IP con cualquier máscara por la interfaz a la que va conectado al ISP.
+R2(config)#ip route 0.0.0.0 0.0.0.0 g0/3/0 
 
 R2(config)#router ospf 10
-R2(config-router)#default-information originate // MUY IMPORTANTE COLOCAR, sino los routers no tendrán acceso a internet exterior.
+
+// MUY IMPORTANTE COLOCAR, sino los routers no tendrán acceso a internet exterior.
+R2(config-router)#default-information originate 
 ```
 
 **10. Configure la NAT/PAT** 
@@ -384,6 +407,9 @@ R2(config-router)#default-information originate // MUY IMPORTANTE COLOCAR, sino 
 
  **NAT** 
 ```javascript
+
+// Las IPs privadas y públicas son las que corresponden al server
+// local en la tabla de direccionamiento del word del parcial
 R2(config)#ip nat inside source static <ip privada> (192.168.X.98) <ip pública> (200.123.226.1)
 ```
 
