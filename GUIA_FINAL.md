@@ -238,7 +238,7 @@ correspondiente a la interfaz g0/0.13)
 ## 5.1
 
 * En Router 2
-### DHCP para vlans 
+### DHCP para vlans (EN ROUTER 2)
 ```javascript
 R2(config)#ip dhcp pool VLAN10
 R2(dhcp-config)#NEtwork 192.168.X.32 255.255.255.240 //la ip de la interfaz de la vlan -1 el último número
@@ -251,7 +251,7 @@ R2(dhcp-config)#DNs-server 192.168.X.98
 R2(dhcp-config)#exit
 ```
 * Mismos conceptos para LAN-R1 y Lan-R3...
-### DHCP para LAN-R1
+### DHCP para LAN-R1 (EN ROUTER 2)
 ```javascript
 R2(config)#ip dhcp pool LAN-R1
 R2(dhcp-config)#network 192.168.X.0 255.255.255.224
@@ -259,7 +259,7 @@ R2(dhcp-config)#default-router 192.168.X.1
 R2(dhcp-config)#dns-server 192.168.X.98
 ```
 
-### DHCP para LAN-R3
+### DHCP para LAN-R3 (EN ROUTER 2) 
 ```javascript
 R2(config)#ip dhcp pool LAN-R3
 R2(dhcp-config)#network 192.168.X.192 255.255.255.224
