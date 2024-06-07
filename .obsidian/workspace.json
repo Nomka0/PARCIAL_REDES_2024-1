@@ -13,23 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PARCIAL_REDES.MD",
+                "file": "GUIA_FINAL.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "3a3385fccd848814",
+            "id": "4dd6944a8f230eed",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Comandos CiscoPDF.pdf"
+                "file": "GUIA_FINAL.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -79,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "16810cbf9676522f",
@@ -95,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PARCIAL_REDES.MD",
+                "file": "GUIA_FINAL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PARCIAL_REDES.MD",
+                "file": "GUIA_FINAL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PARCIAL_REDES.MD"
+                "file": "GUIA_FINAL.md"
               }
             }
           }
@@ -156,11 +160,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1bde91ec25f18139",
+  "active": "4dd6944a8f230eed",
   "lastOpenFiles": [
+    "Examen final 2023-2(2).pdf",
+    "lu25514b5qua.tmp",
+    "Pasted image 20240604174131.png",
+    "Pasted image 20240604174024.png",
     "PARCIAL_REDES.MD",
-    "Pasted image 20240603014445.png",
-    "Pasted image 20240603013819.png",
-    "Comandos CiscoPDF.pdf"
+    "GUIA_FINAL.md",
+    "Comandos CiscoPDF.pdf",
+    "Untitled.md",
+    "Pasted image 20240603142637.png",
+    "Pasted image 20240603142630.png",
+    "Pasted image 20240603140913.png",
+    "Pasted image 20240603135809.png",
+    "Pasted image 20240603135808.png",
+    "Pasted image 20240603135722.png",
+    "Pasted image 20240603132938.png",
+    "GUIA_FINAL.md~",
+    "GUIA_FINAL.MD~",
+    "GUIA_FINAL.MD",
+    "Pasted image 20240603102603.png"
   ]
 }
