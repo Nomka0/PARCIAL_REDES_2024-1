@@ -29,7 +29,8 @@ R2(config)#access-list 10 deny any
 R2(config)#line vty 0 4
 R2(config)#access-class 10 in
 ```
-* Esta es la vlan de gestión en el taller actual, comparar con la del eXamen, y cambiar si es necesario en el anterior comando (3.5)
+
+* Esta es la vlan de gestión en el taller actual, comparar con la del examen, y cambiar si es necesario en el anterior comando (3.5)
 
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603014445.png)
 
@@ -417,7 +418,5 @@ R2(dhcp-config)# dns-server 192.168.X.98
 # TABLA TALLER ORIGINAL
 *  Esta tabla es para comparar si son las mismas ips, si es así, se pueden usar los comandos de arriba sin muchos cambios
 
+
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603013819.png)
-
-
-
