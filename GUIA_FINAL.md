@@ -38,7 +38,7 @@ R2(config-line)#exit
 **4. Configuración de opciones de seguridad puertos switch ```S2```**
 
 ```javascript
-S2(config)#ip default-gateway 192.168.X.129 // IP correspondiente a la vlan de gestión en R2
+S2(config)#ip default-gateway 192.168.X.129 //IP de la interfaz de vlan 1 -1.
 //Creación de vlans según la tabla de vlans
 S2(config)#vlan 10
 S2(config-vlan)#name Ventas
@@ -229,12 +229,12 @@ S3(config)#ip name-server 192.168.X.98 // IP privada de server local. la cual es
 
 ## Comprobación de conexión de SSH en ***```S2```***
 ```javascript
-ssh -l Admin 192.168.X.129 <ip de vlan de gestiónen
+S2#ssh -l Admin 192.168.X.129 <ip de vlan de gestiónen
 la subinterfaz de r2 >(en ese caso, si te fijas  en
 las tablas, es la vlan 13, entonces es la ip 
 correspondiente a la interfaz g0/0.13) 
 ```
-
+**NOTA IMPORTANTE:** Este comando se pone en el modo enable, si lo pones en S2#(config), o en cualquier otro, no te va a funcionar
 ## 5.1
 
 * En ***```Router 2```***

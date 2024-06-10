@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "16810cbf9676522f",
@@ -160,14 +159,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4dd6944a8f230eed",
+  "active": "a5b1862d1306191e",
   "lastOpenFiles": [
+    "LAB11.MD",
+    "GUIA_FINAL.md",
     "Examen final 2023-2(2).pdf",
     "lu25514b5qua.tmp",
     "Pasted image 20240604174131.png",
     "Pasted image 20240604174024.png",
     "PARCIAL_REDES.MD",
-    "GUIA_FINAL.md",
     "Comandos CiscoPDF.pdf",
     "Untitled.md",
     "Pasted image 20240603142637.png",
