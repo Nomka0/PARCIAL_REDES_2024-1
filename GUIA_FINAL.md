@@ -371,13 +371,13 @@ R3(config-router)#passive-interface g0/0
 
 
 # Punto 7
-## 7.1 
+## 7.1  EN ```SERVER LOCAL```
 
 * Se cambia el index para que muestre ```ABCVentas```
 
 	![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603135722.png)
 
-## 7.2 
+## 7.2 EN ```SERVER LOCAL```
 
 * Se agrega www.google.com con la IP de google que se muestra abajito del server encima del dibujo de la nube en la topología.
 * Se agrega www.ABCVentas.com con la ```IP privada del server local``` **(SE ENCUENTRA EN LA TABLA DE DIRECCIONAMIENTO DEL WORD DEL PARCIAL)**.
