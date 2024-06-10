@@ -410,7 +410,10 @@ R2(config-router)#default-information originate
 
 // Las IPs privadas y públicas son las que corresponden al server
 // local en la tabla de direccionamiento del word del parcial
-R2(config)#ip nat inside source static <ip privada> (192.168.X.98) <ip pública> (200.123.226.1)
+// el comando es así:
+R2(config)#ip nat inside source static <ip privada> <ip pública> 
+//entonces con las ips del parcial, sería así...
+R2(config)#ip nat inside source static 192.168.X.98 200.123.226.1
 ```
 
 * Colocamos en cada ```g0/0.x``` el comando *```'ip nat inside'```*
