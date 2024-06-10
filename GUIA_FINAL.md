@@ -332,8 +332,8 @@ R2(config-router)#passive-interface g0/0.13
 R2(config-router)#passive-interface g0/0.14
 ```
 
-* Aplicamos el mismo procedimiento tanto para R1 como para R3
-## ```ROUTER 1```
+* Aplicamos el mismo procedimiento tanto para **```R1```** como para **```R3```**
+## **```ROUTER 1```**
 ```javascript
 R1>en
 R1#conf t
@@ -357,15 +357,15 @@ R3(config-router)#network 192.168.X.232 0.0.0.3 area 0
 R3(config-router)#passive-interface g0/0
 ```
 
-* Una vez configurado, comprobar en cada pc si se puede asignar ```DHCP```
+* Una vez configurado, comprobar en cada PC si se puede asignar ```DHCP```
 
 	![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603102451.png)
 
-**Configuración de enrutamiento de Server local**
+**CONFIGURACIÓN DE ENRUTAMIENTO DE ```SERVER LOCAL```** 
 
-*  **MUY IMPORTANTE!!!!**: Ten en cuenta el valor de ```X``` (en mi caso aquí fue ```15```). La ip es la de la tabla de direccionamiento en el parcial, la máscara también, la default gateway es la misma IP, pero restandole 1. Y el ```DNS Server``` es la misma IP del server (generalmente eso último del DNS es igual para los demas routers)
 ![ScreenShot](https://raw.githubusercontent.com/Nomka0/PARCIAL_REDES_2024-1/final/Pasted%20image%2020240603132938.png)
 
+*  **MUY IMPORTANTE!!!!**: Ten en cuenta el valor de ```X``` (en mi caso aquí fue ```15```). La ip es la de la tabla de direccionamiento en el parcial, la máscara también, la default gateway es la misma IP, pero restandole 1. Y el ```DNS Server``` es la misma IP del server (generalmente eso último del DNS es igual para los demas routers)
 # Punto 6
 <p> Ya se hizo antes cuando se configuró el Router 2 (router on a stick, e inter vlan), y lo demás (switches, etc) </p>
 
