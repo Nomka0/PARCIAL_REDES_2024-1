@@ -324,7 +324,6 @@ R2(config-router)#network 192.168.X.128 0.0.0.15 area 0
 R2(config-router)#network 192.168.X.160 0.0.0.15 area 0
 R2(config-router)#network 192.168.X.225 0.0.0.3 area 0
 R2(config-router)#network 192.168.X.233 0.0.0.3 area 0
-R2(config-router)#network 200.31.12.0 0.0.0.3 area 0
 R2(config-router)#passive-interface g0/0.10
 R2(config-router)#passive-interface g0/0.11
 R2(config-router)#passive-interface g0/0.12
